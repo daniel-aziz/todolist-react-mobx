@@ -24,7 +24,7 @@ export class TodoList {
     }
 
     @computed
-    get openTodo() : TodoItem[] {
+    get openTodos() : TodoItem[] {
         return this.list.filter(todo => !todo.isDone)
     }
 }
