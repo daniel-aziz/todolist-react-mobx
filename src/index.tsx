@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { TodoList } from './stores/TodoList';
+import { StoreProvider } from './helpers/store-provider';
+
+const todoList = new TodoList([
+  'Should Starting Writing in React',
+  'Should Learn MobX',
+  'Should Watch Once Piece :)'
+]);
+
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StoreProvider value={todoList}>
     <App />
-  </React.StrictMode>,
+  </StoreProvider>,
   document.getElementById('root')
 );
 
