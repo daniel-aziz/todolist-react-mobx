@@ -1,14 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {TodoList} from "./components/TodoList";
+import {TodoNew} from "./components/TodoNew";
 
-function App() {
-  return (
-    <div className="App">
-
-
-    </div>
-  );
+const App = () => {
+    return (
+        <div className="App">
+            <TodoNew/>
+            <TodoList/>
+        </div>
+    );
 }
 
 export default App;
